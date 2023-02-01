@@ -1,0 +1,39 @@
+<!-- <div style="margin-top: 90px;">
+      <div class="card m-3 d-inline-block" style="max-width: 750px;" *ngFor="let product of products">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{product.productImage}}" class="img-fluid rounded-start" alt="{{product.productImage}}" >
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{product.productName}}</h5>
+              <p class="card-text">{{product.productDescription}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div> -->
+
+<div style="margin-top: 90px;">
+  <div class="card m-5 d-inline-block" style="max-width: 670px;" *ngFor="let product of products">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{product.productImage}}" class="img-fluid rounded-start" alt="{{product.productImage}}" >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fw-bolder">{{product.productName}}</h5>
+          <small class="fs-6 text-secondary d-block">{{product.productCategory}}</small>
+          <img *ngIf="product.productRating == 5" src="assets/5star.png" class="img-fluid rounded-start" width="75px">
+          <img *ngIf="product.productRating >= 4 && product.productRating <= 4.9" src="assets/4star.png" class="img-fluid rounded-start" width="75px">
+          <img *ngIf="product.productRating >= 3 && product.productRating <= 3.9" src="assets/3star.png" class="img-fluid rounded-start" width="75px">
+          <img *ngIf="product.productRating >= 2 && product.productRating <= 2.9" src="assets/2star.png" class="img-fluid rounded-start" width="75px">
+          <img *ngIf="product.productRating >= 1 && product.productRating <= 1.9" src="assets/2star.png" class="img-fluid rounded-start" width="75px">
+          <small class="m-2">({{product.productReviewPersons}})</small>
+          <small class="fs-4 fw-bolder d-block">₹{{product.productPrice}}</small>
+          <p class="card-text">{{product.productDescription}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

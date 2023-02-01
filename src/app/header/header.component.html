@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm p-3 mb-5 bg-body rounded" >
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold {{navActivatedHome}} " aria-current="page" href="#" (click)="navActive('Home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold {{navActivatedShop}} " href="#" (click)="navActive('Shop')">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold {{navActivatedBlog}} " href="#" (click)="navActive('Blog')">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold {{navActivatedContact}} " href="#" (click)="navActive('Contact')">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
