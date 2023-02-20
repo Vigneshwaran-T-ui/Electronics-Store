@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ShoppingService } from '../services/shopping.service';
 import { Product } from '../shared/product.interface';
 
 @Component({
@@ -7,12 +8,19 @@ import { Product } from '../shared/product.interface';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements OnInit {
-  @Input() products!: Product[];
+  // @Input() products!: Product[];
+   public products!: Product[];
 
-  constructor() {}
+  constructor(
+    private shoppingService: ShoppingService
+  ) {}
   
   ngOnInit(): void {
-    console.log(this.products);
+    this.getShoppingProducts();
+  }
+
+  getShoppingProducts() {
+    this.products = this.shoppingService.getShoppingProducts();
   }
 
 }
